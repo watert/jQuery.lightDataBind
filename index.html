@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Jquery.lightdatabind : simple enough (in few KBs code) Data binding based on jQuery" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Jquery.lightdatabind</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/watert/jQuery.lightDataBind">View on GitHub</a>
+
+          <h1 id="project_title">Jquery.lightdatabind</h1>
+          <h2 id="project_tagline">simple enough (in few KBs code) Data binding based on jQuery</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/watert/jQuery.lightDataBind/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/watert/jQuery.lightDataBind/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="jquerylightdatabind" class="anchor" href="#jquerylightdatabind"><span class="octicon octicon-link"></span></a>jQuery.lightDataBind</h1>
+
+<p>Bind your JSON Data in one line code.</p>
+
+<p>&amp; The rest is all standard HTML attribute writing.</p>
+
+<p><strong>NO MORE WEIRED TEMPLATE TAGS</strong> </p>
+
+<p>like this: <code>&lt;script type="template/text"&gt;&lt;div&gt;{{data?}}&lt;/div&gt;&lt;/script&gt;</code></p>
+
+<h2>
+<a name="how-to-use-it" class="anchor" href="#how-to-use-it"><span class="octicon octicon-link"></span></a>How to use it:</h2>
+
+<h4>
+<a name="html-part" class="anchor" href="#html-part"><span class="octicon octicon-link"></span></a>HTML Part</h4>
+
+<div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"resultHtml"</span> <span class="na">class=</span><span class="s">"clearfix well well-small"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">data-src=</span><span class="s">"img"</span> <span class="na">class=</span><span class="s">" pull-left"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3&gt;&lt;a</span> <span class="na">data-text=</span><span class="s">"title"</span> <span class="na">data-href=</span><span class="s">"url"</span><span class="nt">&gt;&lt;/a&gt;&lt;/h3&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-html=</span><span class="s">"content"</span><span class="nt">&gt;</span> <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<h4>
+<a name="javascript-part" class="anchor" href="#javascript-part"><span class="octicon octicon-link"></span></a>Javascript Part</h4>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">img</span><span class="o">:</span><span class="s2">"https://a248.e.akamai.net/assets.github.com/images/modules/dashboard/bootcamp/octocat_setup.png"</span><span class="p">,</span>
+    <span class="nx">url</span><span class="o">:</span><span class="s2">"http://github.com/"</span><span class="p">,</span>
+    <span class="nx">title</span><span class="o">:</span><span class="s2">"This is a title with a href attribute. "</span><span class="p">,</span>
+    <span class="nx">content</span><span class="o">:</span><span class="s2">"Some HTML content with &lt;strong&gt;HTML Tag&lt;/strong&gt; support."</span>
+<span class="p">};</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">"#resultHtml"</span><span class="p">).</span><span class="nx">ldatabind</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</pre></div>
+
+<h2>
+<a name="attributes-can-be-used" class="anchor" href="#attributes-can-be-used"><span class="octicon octicon-link"></span></a>Attributes can be used:</h2>
+
+<ul>
+<li>data-text</li>
+<li>data-html: which supports HTML tags</li>
+<li>data-href</li>
+<li>data-src</li>
+</ul><h2>
+<a name="to-dos" class="anchor" href="#to-dos"><span class="octicon octicon-link"></span></a>TO DOs</h2>
+
+<p><strong>I HAVE NO IDEA</strong>  </p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Jquery.lightdatabind maintained by <a href="https://github.com/watert">watert</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
