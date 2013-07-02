@@ -29,6 +29,15 @@ var data = {
 $("#resultHtml").ldatabind(data);
 ```
 
+#### Result BINGO!
+```html
+<div id="resultHtml" class="clearfix well well-small">
+    <img data-src="img" class=" pull-left" src="https://a248.e.akamai.net/assets.github.com/images/modules/dashboard/bootcamp/octocat_setup.png">
+    <h3><a data-text="title" data-href="url" href="http://github.com/">This is a title with a href attribute. </a></h3>
+    <div data-html="content">Some HTML content with <strong>HTML Tag</strong> support.</div>
+ </div>
+```
+
 ## Attributes can be used:
 
 * data-text
