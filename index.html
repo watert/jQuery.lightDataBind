@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		Simple Data Bind ( for jQuery )
+	</title>
+	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+	<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+	<script src="jQuery.lightDataBind.js"></script>
+</head>
+<body>
+	<div class="container">
+		<br>
+		<h1 class="page-header">Simple Data Bind</h1>
+		<div class="row">
+			<div class="span6">
+				<h2>Result</h2>
+				<div id="resultHtml" class="clearfix well well-small">
+<img data-src="img" class=" pull-left">
+<h3><a data-text="title" data-href="url"></a></h3>
+<div data-html="content"> </div>
+				</div>
+				<h2>HTML</h2>
+				<pre id="htmlPreview">
+					
+				</pre>
+				<script> var html=$.trim($("#resultHtml").html()); $("#htmlPreview").text(html); </script>
+			</div>
+			<div class="span6">
+				<h2>Code</h2>
+				<pre style="tab-size:4;" id="dataPreview">var data = {
+	img:"https://a248.e.akamai.net/assets.github.com/images/modules/dashboard/bootcamp/octocat_setup.png",
+	url:"http://github.com/",
+	title:"This is a title with a href attribute. ",
+	content:"Some HTML content with &lt;strong&gt;HTML Tag&lt;/strong&gt; support."
+};
+$("#resultHtml").ldatabind(data);
+</pre>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span6">
+			</div>
+			<div class="span6">
+			</div>
+		</div>
+	</div>
+	<script>
+		window.data = {
+			img:"https://a248.e.akamai.net/assets.github.com/images/modules/dashboard/bootcamp/octocat_setup.png",
+			url:"http://github.com/",
+			title:"This is a title with a href attribute. ",
+			content:"Some HTML content with <strong>HTML Tag</strong> support."
+		};
+		$("#resultHtml").ldatabind(data);
+
+	</script>
+</body>
+</html>
