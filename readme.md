@@ -28,7 +28,7 @@ var data = {
     title:"This is a title with a href attribute. ",
     content:"Some HTML content with <strong>HTML Tag</strong> support."
 };
-$("#resultHtml").ldatabind(data);
+$("#resultHtml").ldata(data);
 ```
 
 #### Result BINGO!
@@ -40,12 +40,20 @@ $("#resultHtml").ldatabind(data);
  </div>
 ```
 
+## Methods:
+
+Just Like jQuery's DOM accessing methods:
+
+* `$.fn.ldata(jsonObject)`: binding data to DOM using attributes below.
+* `$.fn.ldata()`: reserve method, return current values in the DOM. (NEW)
+
 ## Attributes can be used:
 
 * data-text
 * data-html: which supports HTML tags
 * data-href
 * data-src
+* data-value: for form DOMs
 
 ## TO DOs
 
