@@ -2,7 +2,7 @@
 	$.fn.ldatabind = $.fn.ldata = function(data){
 		var that = this;
 		var isVal = function(value){
-			return value&&value!=""&&value!=0;
+			return value||value==""||value==0;
 		};
 		var attrs = {
 			"data-text":function(dom,value){ return isVal(value)?dom.text(value):dom.text(); },
