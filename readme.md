@@ -47,6 +47,34 @@ Just Like jQuery's DOM accessing methods:
 * `$.fn.ldata(jsonObject)`: binding data to DOM using attributes below.
 * `$.fn.ldata()`: reserve method, return current values in the DOM. (NEW)
 
+### Custom binding function example
+
+```html
+<div id="example">
+    <span data-text="simple"></span> :
+	<span data-func="complex"></span>
+</div>
+<script>
+	var data = {
+		simple:"hello world",
+		complex:{
+			className:"className",
+			text:"complex content"
+		}
+	};
+	$("#id").ldata(data,{
+		complex:function(dom,data){
+			if(data){ // dom to data
+				dom.addClass(data.complex.className)
+					.text(data.complex.text);
+			}else { // data to dom
+				return {complex:{text:dom.text();}};
+			}
+		}
+	});
+</script>
+```
+
 ## Attributes can be used:
 
 * data-text
@@ -54,6 +82,7 @@ Just Like jQuery's DOM accessing methods:
 * data-href
 * data-src
 * data-value: for form DOMs
+* data-func: for customized rendering & reverse bind
 
 ## TO DOs
 
