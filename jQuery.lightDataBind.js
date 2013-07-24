@@ -1,9 +1,19 @@
+/**
+ * jQuery.lightDataBind by [watert](http://itswater.com/)
+ * usage:
+ * 	html: 
+ * 	<div id="example"><span data-text="key"></span></div>
+ * 	javascript:	
+ * 	var bindingFunctions = { funcName:function(dom,data){ if(data)dom.text(data.key+" by func. "); } };
+ * 	$("selector").ldata({key:"value"},bindingFunctions);
+ */
 (function($){
 	$.fn.ldatabind = $.fn.ldata = function(data,binds){
 		var that = this,
 			$el = $(this);
 		binds = $.extend($el.data("ldata-bind")||{},binds||{});
 		$el.data("ldata-bind",binds);
+		var isObject = function(value){ return typeof(value)==="object"&&value!=null; };
 		var isVal = function(value){
 			return value||value==""||value==0;
 		};
@@ -28,7 +38,8 @@
 					var d = $(this);
 					var key = d.attr(attr);
 					var val = bindFunc(d,null,key,true);
-					if(isVal(val))data[key] = val;
+					if(isObject(val)){ $.extend(true,data,val); }
+					else if(isVal(val))data[key] = val;
 				});
 			});
 			return data;
