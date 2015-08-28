@@ -6,8 +6,6 @@ Bind your JSON Data in one line code.
 
 **NO MORE WEIRED TEMPLATE TAGS** 
 
-like this: `<script type="template/text"><div>{{data?}}</div></script>`
-
 Demo Here: [http://watert.github.io/jQuery.lightDataBind/](http://watert.github.io/jQuery.lightDataBind/)
 
 ## How to use it:
